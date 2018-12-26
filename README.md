@@ -1,2 +1,0 @@
-# acang
-normal code
