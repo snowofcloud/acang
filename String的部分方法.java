@@ -9,7 +9,8 @@ import java.util.Locale;
 public class Bitch {
 
     public static void main(String[] args) {
-        //字符串的length、isEmpty、charAt、equalsIgnoreCase、startsWith、endsWith、toLowerCase、toUpperCase、substring--hashCode、indexOf、lastIndexOf、oCharArray
+        //字符串的length、isEmpty、charAt、equalsIgnoreCase、startsWith、endsWith、
+               //toLowerCase、toUpperCase、substring、indexOf、lastIndexOf、toCharArray、getBytes;
         StringBuilder sb = new StringBuilder();//concat  replace   matches contains split join trim toString  format valueOf copyValueOf intern
 
         String s1 = "low_salary";
@@ -71,8 +72,27 @@ public class Bitch {
             return ((beginIndex == 0) && (endIndex == value.length)) ? this
                     : new String(value, beginIndex, subLen);
         }*/
-        System.out.println();
-        System.out.println();
+       System.out.println(s1.indexOf("s"));//返回字符串中某个字符的索引
+        /*public int indexOf(String str) {
+            return indexOf(str, 0);
+        }*/
+        System.out.println(s1.lastIndexOf("y"));//返回最后一个字符的索引
+        /*public int lastIndexOf(String str) {
+            return lastIndexOf(str, value.length);
+        }*/
+        char[] chars = s1.toCharArray();
+        System.out.println(chars[1]);//将字符串转为字符数组
+        /*public char[] toCharArray() {
+            // Cannot use Arrays.copyOf because of class initialization order issues
+            char result[] = new char[value.length];
+            System.arraycopy(value, 0, result, 0, value.length);
+            return result;
+        }*/
+        byte[] bytes = s1.getBytes();
+        System.out.println(bytes[1]);//转为字节数组
+        /*public byte[] getBytes() {
+            return StringCoding.encode(value, 0, value.length);
+        }*/
 
     }
 
